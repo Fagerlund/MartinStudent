@@ -1,52 +1,44 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <title>Studentmottagning</title>
     <link rel="stylesheet" href="stylesheets/app.css" type="text/css" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    <script src="javascripts/JavaScript.js"></script>
 </head>
+
 <body>
     <section id="startBackground">
         <h1>#MartinsStudent2k16</h1>
         <div id="info">
             <p>
-                Datum: 9 juni 2016<br />
-                Plats: Hornsgatan 39A<br />
-                Tid: 16:00 - 00:00
+                Datum: 9 juni 2016<br /> Plats: Hornsgatan 39A<br /> Tid: 16:00 - 00:00
             </p>
         </div>
-        <h2 id="downHead">Tack för din anmälan</h2>
+        <section id="downHead">
+            <h2>Tack för din anmälan</h2>
+            <button onclick="switchView()">Ändra anmälan</button>
+        </section>
         <section id="main">
             <h2>Anmälning</h2>
             <input autocomplete="off" id="firstname" class="namn" type="text" name="FirstName" value="" placeholder="Förnamn" />
-            <input autocomplete="off" id="surname" class="namn" type="text" name="SurName" value="" placeholder="Efternamn" /><br />
+            <input autocomplete="off" id="surname" class="namn" type="text" name="SurName" value="" placeholder="Efternamn" /><br
+            />
             <p>Totalt i sällskapet:</p><br />
-            <input id="number" class="number" type="number" name="Number" value="1" /><br />
-            <input class="sign" type="radio" name="Status" value="Kommer" onclick="changeNumber()" /><p id="kommer">Jag kommer</p><br />
-            <input class="sign" type="radio" name="Status" value="KommerInte" onclick="changeNumber()" /><p id="kommerInte">Jag kommer inte</p><br />
-            <input class="sign" type="radio" name="Status" value="KommerKanske" onclick="changeNumber()" /><p id="kommerKanske">Jag kommer kanske</p><br />
+            <input id="number" class="number" type="number" name="Number" value="1" onchange="changePrefix()" /><br />
+            <input class="sign" type="radio" name="Status" value="Kommer" />
+            <p id="kommer">Jag kommer</p><br />
+            <input class="sign" type="radio" name="Status" value="KommerInte" />
+            <p id="kommerInte">Jag kommer inte</p><br />
+            <input class="sign" type="radio" name="Status" value="KommerKanske" />
+            <p id="kommerKanske">Jag kommer kanske</p><br />
             <button onclick="sendInvite()">Skicka</button>
             <p id="fail"></p>
         </section>
     </section>
-    <script>
-        function changeNumber() {
-            var number = document.getElementById('number');
-            if (number.value > number.defaultValue) {
-                document.getElementById('kommer').innerHTML = 'Vi kommer';
-                document.getElementById('kommerInte').innerHTML = 'Vi kommer inte';
-                document.getElementById('kommerKanske').innerHTML = 'Vi kommer kanske';
-            }
-            else {
-                document.getElementById('kommer').innerHTML = 'Jag kommer';
-                document.getElementById('kommerInte').innerHTML = 'Jag kommer inte';
-                document.getElementById('kommerKanske').innerHTML = 'Jag kommer kanske';
-            }
-        };
-        window.onload = changeNumber;
-    </script>
+    <script src="javascripts/JavaScript.js"></script>
 </body>
+
 </html>
