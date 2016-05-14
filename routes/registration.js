@@ -11,14 +11,15 @@ router.post('/', function (req, res) {
     var number = req.body.number;
     var status = req.body.status;
 
-    var browser = '';
+    var browser = '', device='';
     try {
         var ua = req.headers['user-agent'];
-        var parser = new UAParser();
-        browser = JSON.stringify(parser.setUA(ua).getBrowser());
+        var parser = new UAParser().setUA(ua);
+        browser = JSON.stringify(parser.getBrowser());
+        device=JSON.stringify(parser.getDevice());
     } catch (ex) { }
 
-    var str = firstname + '\t' + lastname + '\t' + number + '\t' + status + '\t' + (new Date()).getTime() + '\t' + browser + '\n';
+    var str = firstname + '\t' + lastname + '\t' + number + '\t' + status + '\t' + (new Date()).getTime() + '\t' + browser + '\t' + device + '\n';
     fs.appendFile('registration.txt', str, function (err) {
         if (err)
             console.log(err)

@@ -1,3 +1,2 @@
-a	s	1	Kommer	1463060684008	{"name":"Chrome","version":"50.0.2661.94","major":"50"}
-e	d	2	Kommer	1463066839913	{"name":"Chrome","version":"50.0.2661.94","major":"50"}
-ed	dr	1	KommerInte	1463067033351	{"name":"Chrome","version":"50.0.2661.94","major":"50"}
+Henrik	Fagerlund	2	Kommer	1463226916637	{"name":"Android Browser","version":"4.0","major":"4"}	{"model":"SM-N900","vendor":"Samsung","type":"mobile"}
+Henrik	Fagerlund	1	KommerKanske	1463228215292	{"name":"Chrome","version":"50.0.2661.102","major":"50"}	{}

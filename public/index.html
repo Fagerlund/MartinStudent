@@ -15,8 +15,9 @@
         <h1>#MartinsStudent2k16</h1>
         <div id="info">
             <p>
-                Datum: 9 juni 2016<br /> Plats: Hornsgatan 39A<br /> Tid: 16:00 - 00:00
+                Datum: 9 juni 2016<br /> Utspring Norra Real 14.00 <br /> Mottagning från 16.00 <br/> Plats: Hornsgatan 39A
             </p>
+            <a id="karta" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/1KWhVW1TN9u">Karta</a>
         </div>
         <section id="downHead">
             <h2>Tack för din anmälan</h2>
@@ -29,12 +30,16 @@
             />
             <p>Totalt i sällskapet:</p><br />
             <input id="number" class="number" type="number" name="Number" value="1" onchange="changePrefix()" /><br />
-            <input class="sign" type="radio" name="Status" value="Kommer" />
-            <p id="kommer">Jag kommer</p><br />
-            <input class="sign" type="radio" name="Status" value="KommerInte" />
-            <p id="kommerInte">Jag kommer inte</p><br />
-            <input class="sign" type="radio" name="Status" value="KommerKanske" />
-            <p id="kommerKanske">Jag kommer kanske</p><br />
+            <input id="ja" class="sign" type="radio" name="Status" value="Kommer" />
+            <label for="ja" id="kommer">Jag kommer
+            </label>
+            <br />
+            <input id="inte" class="sign" type="radio" name="Status" value="KommerInte" />
+            <label for="inte" id="kommerInte">Jag kommer inte</label>
+            <br />
+            <input id="kanske" class="sign" type="radio" name="Status" value="KommerKanske" />
+            <label for="kanske" id="kommerKanske">Jag kommer kanske</label>
+            <br />
             <button onclick="sendInvite()">Skicka</button>
             <p id="fail"></p>
         </section>

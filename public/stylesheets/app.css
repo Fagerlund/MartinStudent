@@ -109,6 +109,7 @@ body {
     width:100%;
     top:0;
     text-align:center;
+    margin:4% 1% 1% 1%;
 }
 #startBackground section{
     width:100%;
@@ -127,6 +128,22 @@ body {
 }
 #info p{
     font-weight:400;
+}
+#karta{
+    background:rgba(0, 0, 0, 0.5);
+    color:#fff;
+    padding:0.6% 2%;
+    border:1px solid #fff;
+    text-decoration:none;
+    margin-top:2%;
+    font-size:25px;
+    display: table;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+#karta:hover{
+    background:rgba(100, 100, 100, 0.3);
+    transition: 0.2s;
 }
 #downHead{
     width:100%;
@@ -154,13 +171,17 @@ form{
     border:1px solid #fff;
     color:#fff;
     font-size:17px;
+    border-radius: 10px;
+    padding:0.8%;
 }
 .number{
     width:4vh;
+    font-size: 19px;
     background:transparent;
     border:1px solid #fff;
     color:#fff;
     padding-left:1vh;
+    border-radius: 10px;
 }
 .number:focus{
     outline:none;
@@ -168,7 +189,8 @@ form{
 .sign{
     margin-top:2%;
 }
-p{
+
+p, label{
     font-size:25px;
     display:inline-block;
     margin-left:1%;
@@ -182,13 +204,13 @@ button{
     color:#fff;
     border:1px solid #fff;
     cursor:pointer;
-    transition:0.5s;
+    transition:0.3s;
+    padding:1% 4%;
+    border-radius: 10px;
 }
 button:hover{
-    background:rgba(255, 255, 255, 0.3);
-    color:#000;
-    border:1px solid #000;
-    transition:0.2s;
+    background:rgba(100, 100, 100, 0.3);
+    transition: 0.2s;
 }
 #fail{
     display:block;
@@ -199,7 +221,7 @@ button:hover{
 }
 
 @media only screen and (max-device-width: 550px){
-    p{
+    p, label{
         font-size:40px;
     }
     #startBackground section h2{
@@ -211,7 +233,7 @@ button:hover{
     }
     button{
         margin-top:8%;
-        padding:1%;
+        padding:1% 4%;
         font-size:35px;
     }
     #startBackground h1{
@@ -219,6 +241,11 @@ button:hover{
     }
     #info{
         line-height:400%;
+    }
+    #karta{
+        padding:1% 4%;
+        font-size:50px;
+        border-radius: 10px
     }
     input[type=radio] {
         border: 0px;
