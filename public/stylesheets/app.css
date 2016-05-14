@@ -122,7 +122,7 @@ body {
 }
 #info{
     width:100%;
-    padding-left:10%;
+    padding-left:5%;
     line-height:250%;
     flex-grow:1;
 }
@@ -191,7 +191,7 @@ form{
 }
 
 p, label{
-    font-size:25px;
+    font-size:22px;
     display:inline-block;
     margin-left:1%;
     color:#fff;
